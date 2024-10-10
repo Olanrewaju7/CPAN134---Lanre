@@ -1,0 +1,4 @@
+p {font-size: 15px; font-weight: bold;}
+#p2 {color: darkred; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}/*use # and the id to use for ones u gave an id*/
+.lightblue {color: lightblue; font-size: x-large;}/*This is how u write one for a class */
+main p {background-color: beige; font-size: xx-large}

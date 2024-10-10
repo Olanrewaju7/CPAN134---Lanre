@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Weeek 6 CSS Demo</title>
+        <style>
+            h2 {color: rgb(255,0,0)}
+            p {font-size: 20px;}
+        </style><!--priority levels are in-line, then internal then external-->
+        <link rel="stylesheet" href="main.css">
+
+    </head>
+
+    <body>
+        <h1 style="color: rgba(255, 0, 0, 0.5)">This is a H1 element</h1>
+        <h1 style="color: red">This is also a H1 element, it uses an in-line style sheet</h1>
+
+        <h2>This element is being defined using an enternal style sheet</h2>
+        <h2>So is this</h2>
+        <p> 
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+            Aldus PageMaker including versions of Lorem Ipsum. 
+        </p>
+        <p id = "p2">
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+
+        <p class = "lightblue">
+            This is my third paragraph and I want it to be light blue and using a smaller font size
+        </p>
+
+        <p class = "lightblue">
+            This is my fourth paragraph and I want it to also be light blue and smaller
+        </p>
+
+        <main>
+            <p>This is going to be using the rule based on the element relative to each other</p>
+        </main>
+
+        <h1></h1>
+    </body>
+</html>
