@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ul>
+
+  <script>
+    const ul = document.getElementById('myList');
+    const newLi = document.createElement('li');
+    newLi.textContent = 'Fourth item';
+    ul.appendChild(newLi);
+
+    ul.addEventListener('click', function(event) {
+      if (event.target.tagName === 'LI') {
+        event.target.textContent = getRandomString();
+      }
+    });
+
+    function getRandomString() {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      const length = 10;
+      for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
+    }
+  </script>
+</body>
+</html>

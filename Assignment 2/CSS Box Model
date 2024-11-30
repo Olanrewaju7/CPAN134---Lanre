@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Box Model Demo</title>
+	<style>
+		.box {
+			width: 500px;
+			height: 500px;
+			padding: 20px;
+			border: 5px solid #000;
+			margin: 20px;
+			background-color: #f0f0f0;
+			box-sizing: border-box;
+		}
+		
+		.box:hover {
+			border-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<p>This is a div element with a width of 500px and a height of 500px.</p>
+		<p>It has a padding of 20px, a border of 5px, and a margin of 20px.</p>
+	</div>
+	
+	<button id="changeWidth">Change Width</button>
+	<button id="changePadding">Change Padding</button>
+	<button id="changeBorder">Change Border</button>
+	<button id="changeMargin">Change Margin</button>
+	
+	<script>
+		const box = document.getElementById('box');
+		
+		document.getElementById('changeWidth').addEventListener('click', () => {
+			box.style.width = '600px';
+		});
+		
+		document.getElementById('changePadding').addEventListener('click', () => {
+			box.style.padding = '40px';
+		});
+		
+		document.getElementById('changeBorder').addEventListener('click', () => {
+			box.style.border = '10px solid #0f0';
+		});
+		
+		document.getElementById('changeMargin').addEventListener('click', () => {
+			box.style.margin = '40px';
+		});
+		
+		box.addEventListener('click', () => {
+			box.style.backgroundColor = '#0ff';
+		});
+		
+		box.addEventListener('mouseover', () => {
+			box.style.border = '5px solid #f00';
+		});
+		
+		box.addEventListener('mouseout', () => {
+			box.style.border = '5px solid #000';
+		});
+	</script>
+</body>
+</html>
