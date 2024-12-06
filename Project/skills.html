@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>My Skills - Olanrewaju Sopuruchukwu Olatunbosun</title>
+    <link rel="shortcut icon" href="Images/IMG_1862 (1).jpg" type="image/x-icon">
+</head>
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="index.html">Olanrewaju Sopuruchukwu Olatunbosun</a>
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="index.html" style="--navAni:1">Home</a></li>
+                <li><a href="about.html" style="--navAni:2">About</a></li>
+                <li><a href="skills.html" class="active" style="--navAni:3">Skills</a></li>
+                <li><a href="portfolio.html" style="--navAni:4">Portfolio</a></li>
+                <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkbtn">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    <section class="container skills-section">
+        <h1>My Skills</h1>
+        <div class="skills-list">
+            <div class="skill hidden fade-in-left">
+                <h3>HTML & CSS</h3>
+                <p>Proficient in creating responsive and accessible web pages using HTML and CSS.</p>
+            </div>
+            <div class="skill hidden fade-in-right">
+                <h3>JavaScript</h3>
+                <p>Experienced in building interactive and dynamic web applications using JavaScript.</p>
+            </div>
+            <div class="skill hidden fade-in-left">
+                <h3>React</h3>
+                <p>Skilled in using React to develop modern web applications with reusable components.</p>
+            </div>
+            <div class="skill hidden fade-in-right">
+                <h3>Version Control</h3>
+                <p>Familiar with version control systems like Git for efficient project collaboration.</p>
+            </div>
+            <div class="skill hidden fade-in-left">
+                <h3>UI/UX Design</h3>
+                <p>Knowledgeable in designing user-friendly interfaces with a focus on user experience.</p>
+            </div>
+        </div>
+    </section>    
+    <script>
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
